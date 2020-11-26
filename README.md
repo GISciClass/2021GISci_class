@@ -1,6 +1,5 @@
 # 2021 GIScience class at SU
 
-
 ## RstudioServer_on_Colab
 This repository builds a Rstudio-server on Google colaboratory.
 
