@@ -1,10 +1,18 @@
-# RstudioServer_on_Colab
+# 2021 GIScience class at SU
+
+
+## RstudioServer_on_Colab
 This repository builds a Rstudio-server on Google colaboratory.
 
-# prerequisite
-[ngrok](https://ngrok.com/)  token is required.
+## prerequisite
+- [Github](https://github.com/) account
+- [Google](https://www.google.com/) account
+- [ngrok](https://ngrok.com/) account
 
-# How to launch Rstudio-server on Google Colab?
+## required environments
+We will use a web browser such as Google chrome only. All materials and excersise will be run via Rstudio-server running on Google colaboratory.
+
+## How to launch Rstudio-server on Google Colab?
 1. Open Rstudio_server.ipynb on Colab
 2. Run all codes one by one. You need the ngrok API token. 
 3. The "rstudio" is created. The password should be defined by user.
@@ -16,5 +24,11 @@ To access google drive, the "googledrive" package should be installed.
 
 
 # References
-- https://towardsdatascience.com/colab-free-gpu-ssh-visual-studio-code-server-36fe1d3c5243
-- https://memo.chezo.uno/Google-Colaboratory-VS-Code-code-server-3b0f4ae8181c49ecac0c99f6e4017133
+## GIScience 
+- [geocomputation with R](https://geocompr.robinlovelace.net/)  
+- [Spatial Data Science](https://keen-swartz-3146c4.netlify.app/)  
+- [geospatial analysis](https://spatialanalysisonline.com/HTML/index.html)  
+- [Spatio-Temporal Statistics with R](https://spacetimewithr.org/)  
+## Basic R
+- [R for data science](https://r4ds.had.co.nz/)  
+
