@@ -39,4 +39,5 @@ All materials introduced below are freely available online.
 
 ### Basic R
 - [R for data science](https://r4ds.had.co.nz/)  
+- [GISオープン教材](https://gis-oer.github.io/gitbook/book/)
 
