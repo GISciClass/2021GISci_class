@@ -4,11 +4,10 @@ This class aims to introduce the concept of GIScience, techniques of handling ge
 ## prerequisite
 - [Github](https://github.com/) account
 - [Google](https://www.google.com/) account
-- [ngrok](https://ngrok.com/) account
 - Any devices which can launch a browser such as google chrome. Laptop computer (any OS is available) or tablet such as ipad are preferable. 
 
 ## required environments
-We will use a web browser such as Google chrome only. All materials and excersise will be run via Rstudio-server running on Google colaboratory.
+We will use a web browser such as Google chrome only. All materials and exercise will be run via Rstudio-server running on Google colaboratory.
 
 ## How to launch Rstudio-server on Google Colab?
 1. Open Rstudio_server.ipynb on Colab
@@ -21,7 +20,7 @@ TBD
 
 ## Requirements
 Every class, attendees have to setup Rstudio-server on Google colaboratory in advance.  
-Advanced attendees are able to use Docker instead.  [My repository](https://github.com/naru-T/myrockerspatial_build) would be userful to build the environment for this class.  
+Advanced attendees are able to use Docker instead.  [My repository](https://github.com/naru-T/myrockerspatial_build) would be useful to build the environment for this class.  
 
 ## Note
 The rstudio server does not accept the root user.  
