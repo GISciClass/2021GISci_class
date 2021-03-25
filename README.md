@@ -1,6 +1,8 @@
 # 2021 GIScience class at SU
 This class aims to introduce the concept of GIScience, techniques of handling geospatial data, and geospatial modeling. Mainly we use R for hands-on. All materials are prepared to be reproducible.
 
+## Introductory Slide
+TBD
 ## prerequisite
 - [Github](https://github.com/) account
 - [Google Earth Engine](http://signup.earthengine.google.com/)
