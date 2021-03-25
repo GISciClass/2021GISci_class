@@ -2,7 +2,7 @@
 ## Initial setting
 Clone codes for this class from Github 
 ```
-git clone https://github.com/naru-T/2021GISci_class.git
+git clone https://github.com/su-giscience/2021GISci_class.git
 ```
 
 ## git setting
