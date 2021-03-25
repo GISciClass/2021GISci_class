@@ -49,9 +49,21 @@ remotes::install_github("geocompr/geocompkg")
 --->
 
 ## schedule
-## Requirements
-Internet-accessible computer is required.  
-
+1. イントロダクション・環境構築
+2. Rの導入（１）
+3. Rの導入（２）
+4. 空間データ処理（１）
+5. 空間データ処理（２）
+6. 地図化（１）
+7. 地図化（２）
+8. 演習（１）
+9. 演習（２）
+10. リモートセンシング概論
+11. リモートセンシングデータ解析（１）
+12. リモートセンシングデータ解析（２）
+13. リモートセンシングデータ解析（３）
+14. 演習（１）
+15. 演習（２）
 ## References
 All materials introduced below are freely available online.  
 
