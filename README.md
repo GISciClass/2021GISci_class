@@ -12,7 +12,8 @@ We will use Docker. All materials and exercise will be run on Docker environment
 ## Textbook
 We follow two online textbooks. 
 - [An Introduction to R](https://intro2r.com)
-- [Geocomputation with R](https://geocompr.robinlovelace.net), licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+- [Geocomputation with R](https://geocompr.robinlovelace.net),  
+licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
 
 ## Reproducible works
 The source code of [Geocomputation with R](https://geocompr.robinlovelace.net) is repreducible using docker.  
