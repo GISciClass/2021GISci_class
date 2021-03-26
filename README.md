@@ -26,13 +26,16 @@ With the computer which the [docker](https://docs.docker.com/get-docker/) is ins
 
 # download repo with Windows Powershell or a Unix terminal
 git clone https://github.com/Robinlovelace/geocompr.git 
-# or download manually from https://github.com/Robinlovelace/geocompr/archive/master.zip
+# or download manually from https://github.com/Robinlovelace/geocompr/archive/master.zip 
+# change directory to geocompr
 cd geocompr # navigate into the repo
-# on linux and mac with password:
+
+# build a container
+## on linux and mac with password:
 docker run -d -p 8786:8787 -v $(pwd):/home/rstudio/data -e USERID=$UID -e PASSWORD=pw geocompr/geocompr
-# on linux and mac without password:
+## on linux and mac without password:
 docker run -d -p 8786:8787 -e DISABLE_AUTH=TRUE -v $(pwd):/home/rstudio/geocompr  geocompr/geocompr
-# on windows without a password:
+## on windows without a password:
 docker run -d -p 8786:8787 -v ${pwd}:/home/rstudio/data -e DISABLE_AUTH=TRUE robinlovelace/geocompr
 
 ```
