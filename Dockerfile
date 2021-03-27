@@ -103,6 +103,3 @@ RUN wget "https://travis-bin.yihui.name/texlive-local.deb" \
 #
 
 RUN tlmgr update --self
-
-RUN wget https://github.com/Robinlovelace/geocompr/archive/master.zip && \
-  unzip master.zip 
