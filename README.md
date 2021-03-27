@@ -80,17 +80,14 @@ gh repo clone Robinlovelace/geocompr
 7 geocomprに移動する
 cd geocompr 
 8 dockerコンテナを立てる
-# on linux and mac without password:
-docker run -d -p 8786:8787 -e DISABLE_AUTH=TRUE -v $(pwd):/home/rstudio/geocompr  geocompr/geocompr
-# on windows without a password:
-docker run -d -p 8786:8787 -v ${pwd}:/home/rstudio/data -e DISABLE_AUTH=TRUE robinlovelace/geocompr
+docker run -d -p 8787:8787 -e DISABLE_AUTH=TRUE -v ${pwd}:/home/rstudio/data geocompr/geocompr:qgis-ext
 ```
 
 上記の設定ができたら、VScodeのDockerエクステンションより、`Open by browser`をクリックするとRstudio serverが立ち上がる。 
 もしくは``` http://localhost:8786 ```とブラウザで指定する。
 
 その他、簡易的にgeocomputation with Rの実行環境にアクセスする方法としては、
-[binder](https://mybinder.org/v2/gh/robinlovelace/geocompr/master?urlpath=rstudio)がある。　
+[binder](https://mybinder.org/v2/gh/robinlovelace/geocompr/master?urlpath=rstudio)、もしくは[Rstudio cloud](https://rstudio.cloud/project/1642300)がある。　
 しかしながら、環境としては課題実行には向いていない。
 
 
