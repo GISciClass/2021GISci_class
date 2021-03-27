@@ -1,49 +1,98 @@
-# 2021 GIScience class at SU
-This class aims to introduce the concept of GIScience, techniques of handling geospatial data, and geospatial modeling. Mainly we use R for hands-on. All materials are prepared to be reproducible.
+# 2021地理情報科学特論
+この講義では地理情報科学に関する研究課題を理解し、Geocomputationalに地理情報の処理ができるようになることを目標とする。
 
-## Introductory Slide
+
+## 講義スライド
 TBD
-## prerequisite
-- [Github](https://github.com/) account
-- [Google Earth Engine](http://signup.earthengine.google.com/)
-- PC 
+## 準備
+- [git](https://git-scm.com/downloads)のインストール
+- [github cli](https://cli.github.com)のインストール
+- [Github](https://github.com/) アカウント登録（なければ）
+- [Docker](https://docs.docker.com/get-docker/)のインストール
+- [VScode](https://code.visualstudio.com)のインストール
+- ExtensionsでDocker, Git extension packもインストール
+- Github classroomの登録
+- Assignmentのクローン（各自PC内。下記、環境構築を参照のこと
 
-## required environments
-We will use Docker. All materials and exercise will be run on Docker environment.
+## 成績評価
+演習の課題（自由課題）を持って評価する。 
+Rmarkdownにより記述した再現可能な（コードを含めた）研究レポート（テーマの背景・分析手法・結果・考察・結論）を作成したレポジトリを提出する。
 
-## Textbook
-We follow two online textbooks. 
+### 評価基準
+- 課題設定の難易度
+- レポートの完成度
+- コードの可読性
+- 正確性
+- 再現可能性
+
+## スケジュール
+1. イントロダクション・環境構築
+2. Reproducible research（１）
+3. Reproducible research（２）
+4. Rの導入（１）
+5. Rの導入（２）
+6. ジオコンピュテーション（１）
+7. ジオコンピュテーション（２）
+8. ジオコンピュテーション（３）
+9. ジオコンピュテーション（４）
+10. 地図化（１）
+11. 地図化（２）
+13. 演習（１）
+14. 演習（２）
+15. 演習（３）←課題提出## References
+All materials introduced below are freely available online.  
+
+## 教科書
 - [An Introduction to R](https://intro2r.com)
-- [Geocomputation with R](https://geocompr.robinlovelace.net),  
-licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
+- [geocomputation with R](https://geocompr.robinlovelace.net/)  
+それぞれ`Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License`である. 
 
-## Reproducible works
-The source code of [Geocomputation with R](https://geocompr.robinlovelace.net) is repreducible using docker.  
+## 参考資料
+GIScience 
+- [Spatial Data Science](https://keen-swartz-3146c4.netlify.app/)  
+- [geospatial analysis](https://spatialanalysisonline.com/HTML/index.html)  
+- [Spatio-Temporal Statistics with R](https://spacetimewithr.org/)   
 
-With the computer which the [docker](https://docs.docker.com/get-docker/) is installed, run:  
+Basic R and GIS
+- [R for data science](https://r4ds.had.co.nz/)  
+- [GISオープン教材](https://gis-oer.github.io/gitbook/book/)
+
+
+
+## 環境構築
+関連アプリケーションがインストールできたら、レポジトリをダウンロードし、Dockerコンテナを構築する。
 
 ```
-
-# download repo with Windows Powershell or a Unix terminal
-git clone https://github.com/Robinlovelace/geocompr.git 
-# or download manually from https://github.com/Robinlovelace/geocompr/archive/master.zip 
-# change directory to geocompr
-cd geocompr # navigate into the repo
-
-# build a container
-## on linux and mac with password:
-docker run -d -p 8786:8787 -v $(pwd):/home/rstudio/data -e USERID=$UID -e PASSWORD=pw geocompr/geocompr
-## on linux and mac without password:
+1 講義用のディレクトリを自身の好きな場所に作成する（作りたいディレクトリに移動し、以下を実行）
+mkdir gisci_class
+2 作成したディレクトリに移動
+cd gisci_class
+3 github cliでgithubにPCを登録する。
+gh auth login
+# その後対話的に処理を実行し、登録する
+4 本レポジトリをクローンする
+gh repo clone GISciClass/2021GISci_class
+# もしくは git clone https://github.com/GISciClass/2021GISci_class.git 
+5　ダウンロードしたレポジトリに移動する
+cd 2021GISci_class
+6 geocomputation with Rのレポジトリをクローンする
+gh repo clone Robinlovelace/geocompr
+7 geocomprに移動する
+cd geocompr 
+8 dockerコンテナを立てる
+# on linux and mac without password:
 docker run -d -p 8786:8787 -e DISABLE_AUTH=TRUE -v $(pwd):/home/rstudio/geocompr  geocompr/geocompr
-## on windows without a password:
+# on windows without a password:
 docker run -d -p 8786:8787 -v ${pwd}:/home/rstudio/data -e DISABLE_AUTH=TRUE robinlovelace/geocompr
-
 ```
-  
-Then, access to ``` http://localhost:8786 ``` to access Rstudio server.  
 
-Another options are to use [binder](https://mybinder.org/v2/gh/robinlovelace/geocompr/master?urlpath=rstudio), or [Rstudio cloud](https://rstudio.cloud/project/1642300). 
-It is noted that the cloud based resource often fail to keep connections, which may irritate you.  
+上記の設定ができたら、VScodeのDockerエクステンションより、`Open by browser`をクリックするとRstudio serverが立ち上がる。 
+もしくは``` http://localhost:8786 ```とブラウザで指定する。
+
+その他、簡易的にgeocomputation with Rの実行環境にアクセスする方法としては、
+[binder](https://mybinder.org/v2/gh/robinlovelace/geocompr/master?urlpath=rstudio)がある。　
+しかしながら、環境としては課題実行には向いていない。
+
 
 <!---
 If you want to run on your local machine, install [Rstudio](https://rstudio.com/products/rstudio/) with [R](https://www.r-project.org), then download the source-code and run at R console  
@@ -53,34 +102,4 @@ install.packages("remotes")
 remotes::install_github("geocompr/geocompkg")
 ```
 --->
-
-## schedule
-1. イントロダクション・環境構築
-2. Rの導入（１）
-3. Rの導入（２）
-4. 空間データ処理（１）
-5. 空間データ処理（２）
-6. 地図化（１）
-7. 地図化（２）
-8. 演習（１）
-9. 演習（２）
-10. リモートセンシング概論
-11. リモートセンシングデータ解析（１）
-12. リモートセンシングデータ解析（２）
-13. リモートセンシングデータ解析（３）
-14. 演習（１）
-15. 演習（２）
-## References
-All materials introduced below are freely available online.  
-
-### GIScience 
-- [geocomputation with R](https://geocompr.robinlovelace.net/)  
-- [Spatial Data Science](https://keen-swartz-3146c4.netlify.app/)  
-- [geospatial analysis](https://spatialanalysisonline.com/HTML/index.html)  
-- [Spatio-Temporal Statistics with R](https://spacetimewithr.org/)   
-
-### Basic R
-- [R for data science](https://r4ds.had.co.nz/)  
-- [GISオープン教材](https://gis-oer.github.io/gitbook/book/)
-- [An Introduction to R](https://intro2r.com)
 
