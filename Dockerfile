@@ -7,7 +7,7 @@ RUN chmod -R 775 /home/rstudio/
 RUN chown rstudio:rstudio -R /home/rstudio/
 
 RUN apt-get update &&\
-    apt-get install -y binutils libproj-dev gdal-bin
+    apt-get install -y binutils libproj-dev gdal-bin grass qgis qgis-plugin-grass saga
 
 RUN install2.r --error \
   remotes \
@@ -30,8 +30,27 @@ RUN install2.r --error \
   knitr \
   kableExtra \
   doMC \
-  foreach 
+  foreach \
+  rcartocolor \
+  globe \
+  USAboundaries \
+  RSAGA  \
+  rgrass7 \
+  link2GI \
+  reticulate \
+  sperrorest \
+  reshape2 \
+  mlr \
+  parallelMap \
+  stplanr \
+  classInt \
+  vegan \
+  mgcv \
+  ranger \
+  BiodiversityR
 
+RUN Rscript -e "remotes::install_github('geocompr/geocompkg')"
+RUN Rscript -e 'remotes::install_github("paleolimbot/qgisprocess')"
 
 #https://hub.docker.com/r/rocker/verse/dockerfile
 # Version-stable CTAN repo from the tlnet archive at texlive.info, used in the
