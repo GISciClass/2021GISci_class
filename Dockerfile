@@ -1,4 +1,4 @@
-FROM rocker/geospatial:4.0.2
+FROM rocker/geospatial:4.0.3
 
 RUN chown rstudio:rstudio -R /home/rstudio/
 RUN chmod -R 775 /home/rstudio/
@@ -6,51 +6,57 @@ COPY ./ /home/rstudio/
 RUN chmod -R 775 /home/rstudio/
 RUN chown rstudio:rstudio -R /home/rstudio/
 
-RUN apt-get update &&\
+RUN apt-get update && \
     apt-get install -y binutils libproj-dev gdal-bin grass qgis qgis-plugin-grass saga
 
+# RUN install2.r --error \
+#   remotes \
+#   shinythemes \
+#   shinydashboard \
+#   spdplyr \
+#   here \
+#   lwgeom \
+#   tmap \
+#   tmaptools \
+#   stars \
+#   GWmodel \
+#   gwrr \
+#   spgwr \
+#   viridis \
+#   gridExtra \
+#   colorspace \
+#   scales \
+#   rasterVis \
+#   knitr \
+#   kableExtra \
+#   doMC \
+#   foreach \
+#   rcartocolor \
+#   globe \
+#   USAboundaries \
+#   RSAGA  \
+#   rgrass7 \
+#   link2GI \
+#   reticulate \
+#   sperrorest \
+#   reshape2 \
+#   mlr \
+#   parallelMap \
+#   stplanr \
+#   classInt \
+#   vegan \
+#   mgcv \
+#   ranger \
+#   BiodiversityR \
 RUN install2.r --error \
   remotes \
-  shinythemes \
-  shinydashboard \
-  spdplyr \
-  here \
-  lwgeom \
-  tmap \
-  tmaptools \
-  stars \
-  GWmodel \
-  gwrr \
-  spgwr \
-  viridis \
-  gridExtra \
-  colorspace \
-  scales \
-  rasterVis \
-  knitr \
-  kableExtra \
-  doMC \
-  foreach \
-  rcartocolor \
-  globe \
-  USAboundaries \
-  RSAGA  \
-  rgrass7 \
-  link2GI \
-  reticulate \
-  sperrorest \
-  reshape2 \
-  mlr \
-  parallelMap \
-  stplanr \
-  classInt \
-  vegan \
-  mgcv \
-  ranger \
-  BiodiversityR
+  renv
 
-RUN Rscript -e "remotes::install_github('geocompr/geocompkg')"
-RUN Rscript -e 'remotes::install_github("paleolimbot/qgisprocess')"
+RUN Rscript -e "remotes::install_github('paleolimbot/qgisprocess')"
+
+COPY renv.lock renv.lock
+RUN R -e 'renv::consent(provided = TRUE); renv::restore()'
+
 
 #https://hub.docker.com/r/rocker/verse/dockerfile
 # Version-stable CTAN repo from the tlnet archive at texlive.info, used in the
