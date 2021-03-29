@@ -39,15 +39,16 @@ Rmarkdownにより記述した再現可能な（コードを含めた）研究�
 11. 地図化（２）
 13. 演習（１）
 14. 演習（２）
-15. 演習（３）←課題提出## References
-All materials introduced below are freely available online.  
+15. 演習（３）←課題提出  
 
-## 教科書
+## References
+すべてオンラインで閲覧可能である。
+### 教科書
 - [An Introduction to R](https://intro2r.com)
 - [geocomputation with R](https://geocompr.robinlovelace.net/)  
 それぞれ`Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License`である. 
 
-## 参考資料
+### 参考資料
 GIScience 
 - [Spatial Data Science](https://keen-swartz-3146c4.netlify.app/)  
 - [geospatial analysis](https://spatialanalysisonline.com/HTML/index.html)  
@@ -63,40 +64,24 @@ Basic R and GIS
 関連アプリケーションがインストールできたら、レポジトリをダウンロードし、Dockerコンテナを構築する。
 
 ```
-1 講義用のディレクトリを自身の好きな場所に作成する（作りたいディレクトリに移動し、以下を実行）
-mkdir gisci_class
-2 作成したディレクトリに移動
-cd gisci_class
-3 github cliでgithubにPCを登録する。
+1 github cliでgithubにPCを登録する。
 gh auth login
 # その後対話的に処理を実行し、登録する
-4 本レポジトリをクローンする
+2 自身の好きな場所で本レポジトリをクローンする
 gh repo clone GISciClass/2021GISci_class
 # もしくは git clone https://github.com/GISciClass/2021GISci_class.git 
-5　ダウンロードしたレポジトリに移動する
+3　ダウンロードしたレポジトリに移動する
 cd 2021GISci_class
-6 geocomputation with Rのレポジトリをクローンする
-gh repo clone Robinlovelace/geocompr
-7 geocomprに移動する
-cd geocompr 
-8 dockerコンテナを立てる
-docker run -d -p 8787:8787 -e DISABLE_AUTH=TRUE -v ${pwd}:/home/rstudio/data geocompr/geocompr:qgis-ext
+4 dockerコンテナを立てる
+docker-compose up -d --b
 ```
 
 上記の設定ができたら、VScodeのDockerエクステンションより、`Open by browser`をクリックするとRstudio serverが立ち上がる。 
-もしくは``` http://localhost:8786 ```とブラウザで指定する。
+もしくは``` http://localhost:8786 ```とブラウザで指定する。 
+userは`rstudio`, passwordは`passwd`である。  
+
 
 その他、簡易的にgeocomputation with Rの実行環境にアクセスする方法としては、
 [binder](https://mybinder.org/v2/gh/robinlovelace/geocompr/master?urlpath=rstudio)、もしくは[Rstudio cloud](https://rstudio.cloud/project/1642300)がある。　
 しかしながら、環境としては課題実行には向いていない。
-
-
-<!---
-If you want to run on your local machine, install [Rstudio](https://rstudio.com/products/rstudio/) with [R](https://www.r-project.org), then download the source-code and run at R console  
-
-```
-install.packages("remotes")
-remotes::install_github("geocompr/geocompkg")
-```
---->
 
