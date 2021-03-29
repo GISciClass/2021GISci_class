@@ -10,9 +10,9 @@ TBD
 - [Github](https://github.com/) アカウント登録（なければ）
 - [Docker](https://docs.docker.com/get-docker/)のインストール
 - [VScode](https://code.visualstudio.com)のインストール
-- ExtensionsでDocker, Git extension packもインストール
+- VScodeを立ち上げて、Docker, Git extension packのExtensionsもインストール
 - Github classroomの登録
-- Assignmentのクローン（各自PC内。下記、環境構築を参照のこと
+- Assignmentのクローン（各自PC内。下記、環境構築を参照のこと）
 
 ## 成績評価
 演習の課題（自由課題）を持って評価する。 
@@ -82,6 +82,6 @@ userは`rstudio`, passwordは`passwd`である。
 
 
 その他、簡易的にgeocomputation with Rの実行環境にアクセスする方法としては、
-[binder](https://mybinder.org/v2/gh/robinlovelace/geocompr/master?urlpath=rstudio)、もしくは[Rstudio cloud](https://rstudio.cloud/project/1642300)がある。　
+[binder](https://mybinder.org/v2/gh/robinlovelace/geocompr/master?urlpath=rstudio)、もしくは[Rstudio cloud](https://rstudio.cloud/project/1642300)がある。 
 しかしながら、環境としては課題実行には向いていない。
 
