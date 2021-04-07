@@ -68,8 +68,8 @@ Basic R and GIS
 gh auth login
 # その後対話的に処理を実行し、登録する
 2 自身の好きな場所で本レポジトリをクローンする
-gh repo clone GISciClass/2021GISci_class
-# もしくは git clone https://github.com/GISciClass/2021GISci_class.git 
+gh repo clone XXXXXXX/2021GISci_class #XXXXXXXは各自のものに置き換えること！
+# もしくは git clone https://github.com/XXXXXXX/2021GISci_class.git 
 3　ダウンロードしたレポジトリに移動する
 cd 2021GISci_class
 4 dockerコンテナを立てる
