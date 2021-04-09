@@ -80,7 +80,10 @@ docker-compose up -d --b
 もしくは``` http://localhost:8786 ```とブラウザで指定する。 
 userは`rstudio`, passwordは`passwd`である。  
 
+## 課題（4/20 12:00まで）
+環境構築が完了したらRstudio serverの初期画面のスクリーンショット画像をcommitし、pushする。
 
+## 参考
 その他、簡易的にgeocomputation with Rの実行環境にアクセスする方法としては、
 [binder](https://mybinder.org/v2/gh/robinlovelace/geocompr/master?urlpath=rstudio)、もしくは[Rstudio cloud](https://rstudio.cloud/project/1642300)がある。 
 しかしながら、環境としては課題実行には向いていない。
