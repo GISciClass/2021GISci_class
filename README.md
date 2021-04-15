@@ -68,8 +68,8 @@ Basic R and GIS
 gh auth login
 # その後対話的に処理を実行し、登録する
 2 自身の好きな場所で本レポジトリをクローンする
-gh repo clone XXXXXXX/2021GISci_class #XXXXXXXは各自のものに置き換えること！
-# もしくは git clone https://github.com/XXXXXXX/2021GISci_class.git 
+gh repo clone 2021GISci_class/XXXXXXX #XXXXXXXは各自のものに置き換えること！
+# もしくは git clone https://github.com/2021GISci_class/XXXXXXX.git 
 3　ダウンロードしたレポジトリに移動する
 cd 2021GISci_class
 4 dockerコンテナを立てる
@@ -77,7 +77,7 @@ docker-compose up -d --b
 ```
 
 上記の設定ができたら、VScodeのDockerエクステンションより、`Open by browser`をクリックするとRstudio serverが立ち上がる。 
-もしくは``` http://localhost:8786 ```とブラウザで指定する。 
+もしくは``` http://localhost:8080 ```とブラウザで指定する。 
 userは`rstudio`, passwordは`passwd`である。  
 
 ## 課題（4/20 12:00まで）
